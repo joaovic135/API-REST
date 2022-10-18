@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang= "eng">
+    <head>
+        <meta charset= "UTF-8">
+        <title>Aplicação</title>
+    </head>
+    <body>
+        <div class="content">
+            {% for student in students %}
+                <div class = "student">
+                    <p> #{{student.firstname}} </p>
+                </div>
+                    
+                <div class = "classes">
+                    {% for class in student.classes %} 
+                        <p> #{{class.name}} </p>
+                    {% endfor %}
+                </div>
+                   
+                {% endfor %}
+        </div>
+    </body>
+</html>
